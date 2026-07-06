@@ -27,6 +27,24 @@ tabs.forEach((tab) => {
 const waFab = document.getElementById("waFab");
 const waWidget = document.getElementById("waWidget");
 const waClose = document.getElementById("waClose");
+const testimonialsTrack = document.querySelector(".testimonials-track");
+
+function ensureTestimonialsLoopTrack() {
+  if (!(testimonialsTrack instanceof HTMLElement)) return;
+  const primaryGroup = testimonialsTrack.querySelector(".testimonials-group");
+  if (!(primaryGroup instanceof HTMLElement)) return;
+  const existingClone = testimonialsTrack.querySelector('.testimonials-group[data-clone="true"]');
+  if (existingClone) return;
+
+  const clone = primaryGroup.cloneNode(true);
+  if (clone instanceof HTMLElement) {
+    clone.setAttribute("aria-hidden", "true");
+    clone.setAttribute("data-clone", "true");
+    const cloneAvatars = clone.querySelectorAll(".testimonial-avatar");
+    cloneAvatars.forEach((img) => img.setAttribute("alt", ""));
+    testimonialsTrack.appendChild(clone);
+  }
+}
 
 if (waFab && waWidget) {
   waFab.addEventListener("click", () => {
@@ -53,6 +71,34 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 
 updateChatbotScrollShift();
+ensureTestimonialsLoopTrack();
+
+async function loadIndianTestimonialAvatars() {
+  const testimonialAvatars = Array.from(document.querySelectorAll(".testimonials-group .testimonial-avatar"));
+  if (!testimonialAvatars.length) return;
+
+  try {
+    const response = await fetch("https://randomuser.me/api/?results=18&nat=in&seed=future-secure-india");
+    if (!response.ok) {
+      throw new Error(`Failed to load testimonial avatars: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const portraits = (data.results || []).map((item) => item.picture && item.picture.large).filter(Boolean);
+
+    if (!portraits.length) {
+      throw new Error("No Indian profile portraits returned from avatar service.");
+    }
+
+    testimonialAvatars.forEach((avatar, index) => {
+      avatar.src = portraits[index % portraits.length];
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+loadIndianTestimonialAvatars();
 
 const advisoryForm = document.getElementById("advisoryForm");
 const formStatus = document.getElementById("formStatus");

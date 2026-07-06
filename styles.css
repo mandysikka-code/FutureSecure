@@ -331,6 +331,45 @@ h2 {
   color: #37506d;
 }
 
+.playbook-scroller {
+  overflow: hidden;
+}
+
+.playbook-track {
+  display: flex;
+  width: max-content;
+  animation: playbook-scroll 38s linear infinite;
+}
+
+.playbook-group {
+  display: flex;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.playbook-scroller:hover .playbook-track {
+  animation-play-state: paused;
+}
+
+.playbook-card {
+  width: min(360px, 84vw);
+  border: 1px solid #d8e2ee;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: 0 10px 24px rgba(11, 25, 44, 0.08);
+  padding: 18px;
+}
+
+.playbook-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.playbook-card p {
+  margin: 0;
+  color: #2f4865;
+}
+
 .section-head {
   margin-bottom: 24px;
 }
@@ -891,6 +930,11 @@ select:focus {
 }
 
 @keyframes testimonials-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes playbook-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
