@@ -24,7 +24,6 @@ tabs.forEach((tab) => {
   });
 });
 
-const waFab = document.getElementById("waFab");
 const waWidget = document.getElementById("waWidget");
 const waClose = document.getElementById("waClose");
 const testimonialsTrack = document.querySelector(".testimonials-track");

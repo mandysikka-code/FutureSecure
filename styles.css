@@ -1000,6 +1000,220 @@ select:focus {
   border-color: #25d366;
 }
 
+/* ── How We Work ── */
+.how-we-work {
+  background: var(--navy);
+  color: var(--white);
+  padding: 64px 0;
+}
+
+.how-we-work .section-head h2 {
+  color: var(--white);
+}
+
+.how-we-work .eyebrow {
+  color: var(--emerald);
+}
+
+.section-subhead {
+  max-width: 520px;
+  margin: 8px auto 0;
+  color: #8fafc8;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Step cards grid */
+.hww-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 48px;
+}
+
+.hww-card {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.hww-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(0,168,107,0.35);
+  transform: translateY(-4px);
+}
+
+.hww-card--accent {
+  background: rgba(0,168,107,0.08);
+  border-color: rgba(0,168,107,0.3);
+}
+
+.hww-card--accent:hover {
+  background: rgba(0,168,107,0.14);
+  border-color: var(--emerald);
+}
+
+/* Top row: number + icon */
+.hww-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.hww-num {
+  font-family: "Inter", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255,255,255,0.1);
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.hww-card--accent .hww-num {
+  color: rgba(0,168,107,0.25);
+}
+
+.hww-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--emerald);
+}
+
+.hww-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+/* Text */
+.hww-card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.hww-card p {
+  font-size: 0.88rem;
+  color: #8fafc8;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+/* Bullet list */
+.hww-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hww-list li {
+  font-size: 0.82rem;
+  color: #b0c8dc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hww-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--emerald);
+  flex-shrink: 0;
+}
+
+/* Step label tag */
+.hww-tag {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--emerald);
+  background: rgba(0,168,107,0.12);
+  border: 1px solid rgba(0,168,107,0.25);
+  border-radius: 20px;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+/* Arrow between cards */
+.hww-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  margin-top: -10px;
+}
+
+.hww-arrow svg {
+  width: 36px;
+  height: 22px;
+  display: block;
+}
+
+/* CTA row */
+.hww-cta-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hww-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-color: rgba(255,255,255,0.25);
+  color: var(--white);
+}
+
+.hww-wa-btn:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+@media (max-width: 860px) {
+  .hww-steps {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hww-arrow {
+    display: none;
+  }
+}
+
 @keyframes testimonials-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
