@@ -1,0 +1,21 @@
+<svg width="680" height="180" viewBox="0 0 680 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Future Secure - Family First Associate</title>
+  <desc id="logoDesc">A premium minimalist logo with a protective shield, growth chart, and abstract family tree icon.</desc>
+
+  <!-- Icon -->
+  <g transform="translate(8 8)">
+    <path d="M82 14L130 34V78C130 116 106 140 82 154C58 140 34 116 34 78V34L82 14Z" fill="white" stroke="#0B192C" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M50 100L66 84L79 93L97 69L112 76" stroke="#00A86B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M112 76L105 76M112 76V69" stroke="#00A86B" stroke-width="7" stroke-linecap="round"/>
+    <path d="M82 104V123M82 118L68 132M82 118L96 132" stroke="#0B192C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="82" cy="98" r="7" fill="#D4AF37"/>
+    <circle cx="66" cy="136" r="6" fill="#00A86B"/>
+    <circle cx="98" cy="136" r="6" fill="#00A86B"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(170 52)">
+    <text x="0" y="32" fill="#0B192C" font-size="52" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif" letter-spacing="0.3">Future Secure</text>
+    <text x="1" y="68" fill="#00A86B" font-size="23" font-weight="600" font-family="Inter, Segoe UI, Arial, sans-serif" letter-spacing="0.4">Family First Associate</text>
+  </g>
+</svg>
