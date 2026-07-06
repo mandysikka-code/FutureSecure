@@ -4,32 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Future Secure • Family First Associate - LIC wealth management and financial advisory for families, professionals, business owners, seniors, and HNIs.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="keywords" content="LIC advisor, LIC policy planning, family insurance planning, retirement planning India, tax saving LIC, child education corpus, wealth management advisor India">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Future Secure • Family First Associate">
+  <meta property="og:description" content="Premium LIC wealth management advisory for families, professionals, business owners, senior citizens, and HNIs.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Future Secure • Family First Associate">
+  <meta name="twitter:description" content="Protect your family, optimize taxes, and build long-term wealth with LIC-led advisory blueprints.">
   <title>Future Secure • Family First Associate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.fsRetargeting = {
+      enabled: false,
+      ga4MeasurementId: "G-XXXXXXXXXX",
+      metaPixelId: "000000000000000"
+    };
+
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    if (window.fsRetargeting.enabled && /^G-[A-Z0-9]+$/.test(window.fsRetargeting.ga4MeasurementId)) {
+      var gaScript = document.createElement("script");
+      gaScript.async = true;
+      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=" + window.fsRetargeting.ga4MeasurementId;
+      document.head.appendChild(gaScript);
+      gtag("config", window.fsRetargeting.ga4MeasurementId);
+    }
+
+    window.fbq = window.fbq || function () {
+      (window.fbq.q = window.fbq.q || []).push(arguments);
+    };
+
+    if (window.fsRetargeting.enabled && /^[0-9]{8,20}$/.test(window.fsRetargeting.metaPixelId)) {
+      var pixelScript = document.createElement("script");
+      pixelScript.async = true;
+      pixelScript.src = "https://connect.facebook.net/en_US/fbevents.js";
+      document.head.appendChild(pixelScript);
+      window.fbq("init", window.fsRetargeting.metaPixelId);
+      window.fbq("track", "PageView");
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialService",
+          "name": "Future Secure • Family First Associate",
+          "description": "LIC wealth management and financial advisory for families, professionals, business owners, seniors and HNIs.",
+          "telephone": "+91-9760915699",
+          "email": "harneetkaurr.85@gmail.com",
+          "areaServed": ["India", "NRI Clients"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much LIC cover should a family have?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A practical starting point is 12 to 15 times annual income, adjusted for liabilities, children’s future goals and retirement commitments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can LIC plans help with tax planning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Suitable LIC plans can support tax efficiency under relevant provisions while combining life protection with long-term goals."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you help with claim support and nominee guidance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide end-to-end documentation guidance, nominee structuring support and claim coordination assistance for families."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#" class="brand">
+      <a href="#main-content" class="brand">
         <img class="brand-logo" src="logo-future-secure.svg" alt="Future Secure Family First Associate logo">
       </a>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#playbook">Playbook</a>
         <a href="#how-we-work">How We Work</a>
         <a href="#audience">Solutions</a>
+        <a href="#faq">FAQ</a>
         <a href="#trust">Trust</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="#contact">Unlock Prosperity</a>
+      <a class="btn btn-primary btn-sm" href="#contact" data-track="primary-nav-cta">Unlock Prosperity</a>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
         <span class="orb orb-1"></span>
@@ -120,6 +213,9 @@
         <div class="section-head">
           <p class="eyebrow">The Financial Freedom Playbook</p>
           <h2>Strategic Blueprints Designed for Your Life Milestones.</h2>
+          <div class="section-tools">
+            <button type="button" class="btn btn-outline btn-sm motion-toggle" data-motion-target=".playbook-track" aria-pressed="false">Pause Auto-scroll</button>
+          </div>
         </div>
         <div class="playbook-scroller" aria-label="Financial freedom playbook cards">
           <div class="playbook-track">
@@ -381,6 +477,9 @@
         <div class="section-head">
           <p class="eyebrow">Social Proof</p>
           <h2>Trusted by families and business leaders.</h2>
+          <div class="section-tools">
+            <button type="button" class="btn btn-outline btn-sm motion-toggle" data-motion-target=".testimonials-track" aria-pressed="false">Pause Auto-scroll</button>
+          </div>
         </div>
         <div class="testimonials-scroller" aria-label="Client testimonials carousel">
           <div class="testimonials-track">
@@ -606,6 +705,72 @@
       </div>
     </section>
 
+    <section id="proof" class="section conversion-proof">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Conversion Proof</p>
+          <h2>Real outcomes delivered through disciplined LIC-first planning.</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <span class="proof-metric">₹1.8Cr</span>
+            <h3>Family risk shield activated</h3>
+            <p>A dual-income family in Noida moved from fragmented policies to one integrated long-term protection structure.</p>
+          </article>
+          <article class="proof-card">
+            <span class="proof-metric">31%</span>
+            <h3>Tax burden optimization</h3>
+            <p>Working professionals in high-tax brackets improved annual tax efficiency while protecting future milestones.</p>
+          </article>
+          <article class="proof-card">
+            <span class="proof-metric">45 days</span>
+            <h3>Plan-to-activation speed</h3>
+            <p>Corporate owners received complete onboarding, documentation and portfolio activation with compliance-first support.</p>
+          </article>
+          <article class="proof-card">
+            <span class="proof-metric">100%</span>
+            <h3>Annual review continuity</h3>
+            <p>Every active plan is reviewed for goal alignment, policy health, and life-stage changes through advisor check-ins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common LIC planning questions before you commit.</h2>
+        </div>
+        <div class="faq-grid">
+          <details>
+            <summary>How much life cover should I plan for?</summary>
+            <p>Most families begin with 12–15x annual income, then refine based on liabilities, children’s goals, and retirement dependency needs.</p>
+          </details>
+          <details>
+            <summary>Can I combine tax-saving with long-term wealth growth?</summary>
+            <p>Yes. A right-fit LIC portfolio can be structured to support tax efficiency, family risk protection, and long-term financial milestones together.</p>
+          </details>
+          <details>
+            <summary>Do you help with claim support and nominee setup?</summary>
+            <p>Yes. We support documentation readiness, nominee structuring, and claim guidance so your family is protected operationally, not just financially.</p>
+          </details>
+          <details>
+            <summary>Can NRIs and global Indian families work with your team?</summary>
+            <p>Absolutely. We support Indian-origin global clients through India-anchored, compliance-aligned LIC planning with structured advisory calls.</p>
+          </details>
+          <details>
+            <summary>How quickly can my plan be activated after consultation?</summary>
+            <p>In most cases, plan activation starts within 7–15 working days based on documentation readiness and underwriting requirements.</p>
+          </details>
+          <details>
+            <summary>Will I get annual review support after onboarding?</summary>
+            <p>Yes. Every active client receives periodic advisory reviews to ensure portfolio alignment with life-stage and goal changes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section contact-section">
       <div class="container contact-grid">
         <div class="contact-form-wrap">
@@ -613,6 +778,15 @@
             <p class="eyebrow">Contact & Conversion Hub</p>
             <h2>Start your financial planning journey today.</h2>
             <p class="contact-subcopy">Share a few details and receive a personalized roadmap from our advisory desk.</p>
+          </div>
+          <div class="contact-checklist">
+            <h3>Get your free LIC Financial Freedom Checklist.</h3>
+            <p>Receive a practical planning checklist used by high-performing families, professionals, and business owners to reduce protection gaps and improve long-term wealth outcomes.</p>
+            <ul>
+              <li>Coverage gap calculator framework</li>
+              <li>Tax optimization checkpoints</li>
+              <li>Retirement and child-goal planning matrix</li>
+            </ul>
           </div>
           <form class="contact-form" id="advisoryForm">
             <label class="field-half">
@@ -718,34 +892,38 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Future Secure</h3>
-        <p>Family First Associate</p>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <nav class="footer-nav-inline" aria-label="Footer quick navigation">
+            <a href="#main-content">Home</a>
+            <a href="#about">About</a>
+            <a href="#playbook">Playbook</a>
+            <a href="#how-we-work">How We Work</a>
+            <a href="#trust">Trust & Compliance</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Social Proof</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
       </div>
-      <div>
-        <h4>Site Map</h4>
-        <nav class="footer-sitemap" aria-label="Footer sitemap">
-          <a href="#">Home</a>
-          <a href="#about">About</a>
-          <a href="#trust">Trust</a>
-          <a href="#playbook">Playbook</a>
-          <a href="#audience">Solutions</a>
-          <a href="#testimonials">Social Proof</a>
-          <a href="#contact">Contact</a>
-        </nav>
+
+      <div class="footer-bottom">
+        <p>© <span id="footerYear">2026</span> Future Secure • Family First Associate. All rights reserved.</p>
+        <p class="footer-legal">This website is for advisory information purposes only and does not constitute guaranteed returns or legal/tax advice.</p>
       </div>
     </div>
   </footer>
 
-  <button class="wa-fab" id="waFab" aria-label="Open WhatsApp chat support">
+  <button class="wa-fab" id="waFab" type="button" aria-label="Open WhatsApp chat support" aria-controls="waWidget" aria-expanded="false">
     <span>Seeri</span>
   </button>
 
-  <section class="wa-widget" id="waWidget" aria-live="polite" aria-label="WhatsApp assistant">
+  <section class="wa-widget" id="waWidget" aria-live="polite" aria-label="WhatsApp assistant" aria-hidden="true" role="dialog" aria-modal="false">
     <header>
       <strong>Future Secure Assistant</strong>
-      <button id="waClose" aria-label="Close chat">×</button>
+      <button id="waClose" type="button" aria-label="Close chat">×</button>
     </header>
     <div class="wa-body">
       <p>Hi there! Welcome to Future Secure. Choose a service below and our advisor team will assist you right away.</p>
